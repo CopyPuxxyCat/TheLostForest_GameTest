@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 {
     [SerializeField] private AudioClip audioStar;
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] public TextMeshProUGUI _scoreText;
     [SerializeField] private Image _carrotsImage0;
     [SerializeField] private Image _carrotsImage1;
     [SerializeField] private Image _carrotsImage2;
@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
         _scoreText.text = score.ToString();
     }
     
-    private void OnTriggerEnter2D(Collider2D other) 
+    public void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.gameObject.CompareTag("Star"))
         {
