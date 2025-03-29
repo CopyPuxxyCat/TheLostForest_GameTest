@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,9 +9,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioClip audioDeadEnemy;
     [SerializeField] private AudioClip audioAttackEnemy;
     [SerializeField] private AudioSource audiosourceEnemy;
+    [SerializeField] private TextMeshProUGUI _scoreText;
     public static bool isEnemyDeath = false;
     public static int killcounter = 0;
     private bool attack;
+    private Score score;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -32,6 +35,8 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Score.score = Score.score + 5;
+            _scoreText.text = Score.score.ToString();
             audiosourceEnemy.PlayOneShot(audioDeadEnemy,0.5f);
             anim.SetTrigger("enemyDeath");
             isEnemyDeath = true;

@@ -18,6 +18,11 @@ public class Score : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
     }
+
+    public void AddScoreToText()
+    {
+        _scoreText.text = score.ToString();
+    }
     
     private void OnTriggerEnter2D(Collider2D other) 
     {
