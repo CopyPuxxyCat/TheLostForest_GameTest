@@ -1,0 +1,2 @@
+This is a project form Ms.Elif Yener. I use it like a base project to learn some Testing skill that i recently learn at school. I do alitle bit change in the game, add some mechanic like add point when kill enemy, fix some bug in the map, make the slide wood more smooth, some change on enemy AI to make the game harder.
+the origin project link: [Elif Yener.](https://github.com/elifyener/TheLostForest).
