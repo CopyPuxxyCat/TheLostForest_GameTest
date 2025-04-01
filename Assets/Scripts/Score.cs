@@ -9,9 +9,9 @@ public class Score : MonoBehaviour
     [SerializeField] private AudioClip audioStar;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] public TextMeshProUGUI _scoreText;
-    [SerializeField] private Image _carrotsImage0;
-    [SerializeField] private Image _carrotsImage1;
-    [SerializeField] private Image _carrotsImage2;
+    [SerializeField] public Image _carrotsImage0;
+    [SerializeField] public Image _carrotsImage1;
+    [SerializeField] public Image _carrotsImage2;
     public int score = 0;
     public static int carrot = 0;
     private void Start()

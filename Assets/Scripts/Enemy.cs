@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
             attack = false;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    public void OnCollisionEnter2D(Collision2D other) 
     {
         if (other.gameObject.CompareTag("Player") && audioAttackEnemy != null)
         {

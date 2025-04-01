@@ -49,7 +49,7 @@ public class CarrotPlayModeTest
 
         // Kiểm tra số lượng carrot nhặt được
         Assert.AreEqual(1, Score.carrot, "Carrot count không tăng lên sau khi nhặt.");
-        Debug.Log($"✅ Test Passed!:  {Score.carrot}");
+        Debug.Log($" Test Passed!:  {Score.carrot}");
     }
 }
 

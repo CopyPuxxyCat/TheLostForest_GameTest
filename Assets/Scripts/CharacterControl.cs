@@ -7,7 +7,7 @@ public class CharacterControl : MonoBehaviour
     public float jumpForce = 2.0f;
     public float speed = 1.0f;
     
-    private bool grounded = true;
+    public bool grounded = true;
     private bool jump;
     private bool fly;
     public static bool moving;
@@ -151,7 +151,7 @@ public class CharacterControl : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    public void OnCollisionEnter2D(Collision2D other) 
     {
         if (other.gameObject.CompareTag("Ground"))
         {

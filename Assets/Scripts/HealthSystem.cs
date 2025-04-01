@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class HealthSystem : MonoBehaviour
 {
     public static int health = 3;
-    [SerializeField] GameObject live3;
-    [SerializeField] GameObject live2;
-    [SerializeField] GameObject live1;
-    [SerializeField] GameObject live0;
-    [SerializeField] GameObject pauseScene;
-    private void Update() 
+    [SerializeField] public GameObject live3;
+    [SerializeField] public GameObject live2;
+    [SerializeField] public GameObject live1;
+    [SerializeField] public GameObject live0;
+    [SerializeField] public GameObject pauseScene;
+    public void Update() 
     {
         switch (health)
         {
