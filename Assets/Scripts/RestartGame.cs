@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
+    private Score score;
     [SerializeField] public GameObject gameOverScene;
+
+    private void Start()
+    {
+        score = FindObjectOfType<Score>();
+    }
+
     public void Restart()
     {
         Invoke("RestartDelay",1f);
@@ -13,7 +20,7 @@ public class RestartGame : MonoBehaviour
         CharacterControl.resume = false;
         HealthSystem.health = 3;
         Score.carrot = 0;
-        Score.score = 0;
+        score.score = 0;
         Enemy.killcounter = 0;
         Death.deathcounter = 0;
         Time.timeScale = 1;

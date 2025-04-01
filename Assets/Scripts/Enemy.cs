@@ -13,10 +13,11 @@ public class Enemy : MonoBehaviour
     public static bool isEnemyDeath = false;
     public static int killcounter = 0;
     private bool attack;
-    private Score score;
+    private Score scoreM;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        scoreM = FindObjectOfType<Score>();
     }
     private void Update()
     {
@@ -35,8 +36,8 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Score.score = Score.score + 5;
-            _scoreText.text = Score.score.ToString();
+            scoreM.score = scoreM.score + 5;
+            _scoreText.text = scoreM.score.ToString();
             audiosourceEnemy.PlayOneShot(audioDeadEnemy,0.5f);
             anim.SetTrigger("enemyDeath");
             isEnemyDeath = true;

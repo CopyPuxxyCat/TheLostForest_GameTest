@@ -12,7 +12,7 @@ public class Score : MonoBehaviour
     [SerializeField] private Image _carrotsImage0;
     [SerializeField] private Image _carrotsImage1;
     [SerializeField] private Image _carrotsImage2;
-    public static int score = 0;
+    public int score = 0;
     public static int carrot = 0;
     private void Start()
     {
