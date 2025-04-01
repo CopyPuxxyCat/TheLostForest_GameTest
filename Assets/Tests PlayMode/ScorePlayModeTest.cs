@@ -62,7 +62,7 @@ public class ScorePlayModeTest
         yield return new WaitForSeconds(0.1f); // Chờ thêm 1 chút để kiểm tra Destroy
         Assert.IsTrue(star == null || !star.activeInHierarchy, "❌ Star chưa bị Destroy!");
 
-        Debug.Log("✅ Test Passed!:  { scoreManager.score}");
+        Debug.Log($"✅ Test Passed!:  { scoreManager.score}");
     }
 
     [UnityTearDown] // Dọn dẹp sau khi test
