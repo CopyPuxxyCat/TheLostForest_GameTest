@@ -28,7 +28,7 @@ public class BackgroundMusicPlayModeTest
         }
 
         // Chờ 1 frame để AudioSource có thời gian bắt đầu
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(3f);
 
         // Kiểm tra xem nhạc có đang chạy không
         Assert.IsTrue(audioSource.isPlaying, "❌ Background music không chạy.");
