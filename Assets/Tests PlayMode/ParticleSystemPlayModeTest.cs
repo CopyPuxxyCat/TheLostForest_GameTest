@@ -28,7 +28,7 @@ public class ParticleSystemPlayModeTest
         }
 
         // Chờ vài frame để hệ thống cập nhật
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5f);
 
         // Kiểm tra xem particle có đang chạy không
         Assert.IsTrue(ps.isPlaying, "❌ Particle System không chạy.");
