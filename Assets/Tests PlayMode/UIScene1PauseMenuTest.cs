@@ -61,6 +61,7 @@ public class UIScene1PauseMenuTest
     [UnityTest]
     public IEnumerator RestartButton_PauseMenu()
     {
+        //CanActive_PauseMenu();
         // Tìm nút
         var button = GameObject.Find("RestartButton").GetComponent<UnityEngine.UI.Button>();
 
@@ -86,18 +87,29 @@ public class UIScene1PauseMenuTest
         Assert.IsNotNull(scoreText, "Không tìm thấy TMP_InputField trong canvas Score");
         string userInput = scoreText.text;
         Assert.AreEqual("0", userInput, "Điểm số chưa được reset về 0");
+
         // Kiểm tra xem số lượng Carrot có được reset về 0 0
-        /*var carrot0 = GameObject.Find("Carrots/Carrot0");
+        var carrot0 = GameObject.Find("Carrots/Carrot0");
         Assert.IsNotNull(carrot0, "Không tìm thấy canvas tên Carrot0");
+        var img0 = carrot0.GetComponentInChildren<UnityEngine.UI.Image>();
+        Assert.IsNotNull(img0, "Không tìm thấy img0 tên Carrot0");
+
         var carrot1 = GameObject.Find("Carrots/Carrot1");
         Assert.IsNotNull(carrot1, "Không tìm thấy canvas tên Carrot1");
+        var img1 = carrot1.GetComponentInChildren<UnityEngine.UI.Image>();
+        Assert.IsNotNull(img1, "Không tìm thấy img1 tên Carrot0");
+
         var carrot2 = GameObject.Find("Carrots/Carrot2");
         Assert.IsNotNull(carrot2, "Không tìm thấy canvas tên Carrot2");
+        var img2 = carrot2.GetComponentInChildren<UnityEngine.UI.Image>();
+        Assert.IsNotNull(img2, "Không tìm thấy img2 tên Carrot0");
         // Lấy màu và kiểm tra alpha
-        //float alpha = .color.a;
-        Assert.IsFalse(carrot0.activeSelf, "Carrot không được reset về 0");
-        Assert.IsFalse(carrot1.activeSelf, "Carrot không được reset về 0");
-        Assert.IsFalse(carrot2.activeSelf, "Carrot không được reset về 0");*/
+        float alpha0 = img0.color.a;
+        float alpha1 = img1.color.a;
+        float alpha2 = img2.color.a;
+        Assert.AreNotEqual(1f, alpha0, "Alpha0 không phải là 1f (100% hiển thị)");
+        Assert.AreNotEqual(1f, alpha1, "Alpha1 không phải là 1f (100% hiển thị)");
+        Assert.AreNotEqual(1f, alpha2, "Alpha2 không phải là 1f (100% hiển thị)");
     }
 
     [UnityTest]
