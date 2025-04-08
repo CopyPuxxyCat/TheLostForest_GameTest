@@ -15,7 +15,7 @@ public class UIMenuSceneTests
         SceneManager.LoadScene("StartScene");
         yield return null;
 
-        // Tìm nút và văn bản
+        // Tìm nút
         var button = GameObject.Find("StartButton").GetComponent<UnityEngine.UI.Button>();
 
         // Mô phỏng click nút
